@@ -17,7 +17,7 @@ services:
       ports:
        - "3306:3306"
       volumes:
-       - mysql_data:/var/lib/mysql
+       - ./mysql_data:/var/lib/mysql
   
    
     fastapi:
@@ -30,6 +30,7 @@ services:
        ports:
         - "8000:8000"
 volumes:
-   mysql_data:            
+   mysql_data:    
+     driver: local        
 
      
